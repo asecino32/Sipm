@@ -1,0 +1,7 @@
+{% load static %}
+{% block content %}
+    <h1>Bienvenido, {{ user.username }}, esperamos ser de ayuda</h1>
+    <a href="{% url 'subiralgo' %}" class = "btn btn-primary">Subir algo</a>
+    <a href="{% url 'ver' %}" class = "btn btn-primary">Ver cosas</a>
+    <img src="{% static 'meza.jpg' %}">
+{% endblock %}
