@@ -1,0 +1,151 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+ 
+  <div id="wrapper" class="animate">
+    <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Sistema Integrado de Prácticas Matemáticas</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav animate side-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Side Menu Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-md-auto d-md-flex">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inicio
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cuenta</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+     <h1 class="display-10" style="text-align: center; "><b>Cursos de Ejercicios</b></h1>
+    <p class="lead"style="text-align: center">Práctica y ejercita</p>
+    <div class="container-fluid">
+          <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Matemática I</h5>
+              <h6 class="card-subtitle mb-2 text-muted">MAT021</h6>
+              <p class="card-text"> </p>
+            <p><a class="btn btn-lg btn-success" href="{% url 'register_url' %}" style="text-align: center"> Ingresa </a></p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link"></a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Matemática II</h5>
+              <h6 class="card-subtitle mb-2 text-muted">MAT022</h6>
+              <p class="card-text"> </p>
+            <p><a class="btn btn-lg btn-success" href="{% url 'register_url' %}" style="text-align: center"> Ingresa </a></p> 
+              <a href="https://bootsnipp.com/pradeep330" class="card-link"></a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Matemática III</h5>
+              <h6 class="card-subtitle mb-2 text-muted">MAT023</h6>
+              <p class="card-text"> </p>
+            <p><a class="btn btn-lg btn-success" href="{% url 'register_url' %}" style="text-align: center"> Ingresa </a></p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link"></a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Matemática IV</h5>
+              <h6 class="card-subtitle mb-2 text-muted">MAT024</h6>
+              <p class="card-text"> </p>
+            <p><a class="btn btn-lg btn-success" href="{% url 'register_url' %}" style="text-align: center"> Ingresa </a></p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link"></a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link"></a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"> </h5>
+              <h6 class="card-subtitle mb-2 text-muted"> </h6>
+              <p class="card-text"> </p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link"></a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Estado de Progreso</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col"> </th>
+                    <th scope="col">Puntaje</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>24/10/2022</td>
+                    <td> </td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>20/09/2022</td>
+                    <td> </td>
+                    <td>650</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>09/03/2022</td>
+                    <td> </td>
+                    <td>200</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <p style="float: none; text-align: center;">© SIPM | 2022</p></footer>
+        </div>
+      </div>
+    </div>
+  </div>
