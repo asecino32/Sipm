@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
+
 from .forms import NewRegister
 
 # Create your views here.
@@ -22,3 +23,5 @@ def dashboardView(request):
 
 def preguntasView(request):
     return render(request,'preguntas.html')
+def cuestionario_mat021_iv1(request):
+    return render(request,'cuestionario_mat021_iv1.html')
