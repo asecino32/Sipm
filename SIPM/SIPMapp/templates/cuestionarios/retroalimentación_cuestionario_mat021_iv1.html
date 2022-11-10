@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="es-MX">
 
@@ -27,7 +28,7 @@
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cerrar sesión</a>
+          <a class="nav-link" href="{% url 'index' %}">Cerrar sesión</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
@@ -49,7 +50,7 @@
                 <h1 style="text-align: center;">  </h1>
                 <h1 style="text-align: center;">  </h1>
                 <h1 style="text-align: center;">Resolución de Cuestionario MAT021  </h1>
-                <h1 style="text-align: center;">Nivel Inicial  </h1>
+                <h1 style="text-align: center;">Nivel Inicial </h1>
                 <div class="container-fluid">
                     <div class="row">
                   <div class="col">
@@ -72,20 +73,16 @@
                     <div class="card-body">
                       <h5 class="card-title"></h5>
                       <h6 class="card-subtitle mb-2 text-muted"></h6> 
-                    <p style="float: none; text-align: left;">Solución Pregunta 1:</p></footer>
-                    <h6 class="card-subtitle mb-2 text-muted">Imagen</h6> 
-                    <p style="float: none; text-align: left;">-</p></footer>
-                    <p style="float: none; text-align: left;">Solución Pregunta 2:</p></footer>
-                    <h6 class="card-subtitle mb-2 text-muted">Imagen</h6> 
-                    <p style="float: none; text-align: left;">-</p></footer>
-                    <p style="float: none; text-align: left;">Solución Pregunta 3:</p></footer>
-                    <h6 class="card-subtitle mb-2 text-muted">Imagen</h6> 
-                    <p style="float: none; text-align: left;">-</p></footer>
-                    <p style="float: none; text-align: left;">Solución Pregunta 4:</p></footer>
-                    <h6 class="card-subtitle mb-2 text-muted">Imagen</h6> 
-                    <p style="float: none; text-align: left;">-</p></footer>
-                    <p style="float: none; text-align: left;">Solución Pregunta 5:</p></footer>
-                    <h6 class="card-subtitle mb-2 text-muted">Imagen</h6> 
+                    <img src="../../../static/sol_1.jpeg">
+                    <br>
+                    <img src="../../../static/sol_2.jpeg">
+                    <br>
+                    <img src="../../../static/sol_3.jpeg">
+                    <br>
+                    <img src="../../../static/sol_4.jpeg">
+                    <br>
+                    <img src="../../../static/sol_5.jpeg">
+                    <br> 
                   <hr />
               </form>
               <p style="float: none; text-align: center;">© SIPM</p></footer>
