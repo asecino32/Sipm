@@ -124,6 +124,7 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/SIPMapp/dashboard/'
 LOGOUT_REDIRECT_URL = '/SIPMapp/'
+RETRO_MAT021_IV1_REDIRECT_URL = "/SIPMapp/retro_mat021_iv1/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
