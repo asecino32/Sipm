@@ -66,7 +66,7 @@ class QuizUsuario_MAT021_iv1(models.Model):
 		self.puntaje_total = puntaje_actualizado
 		self.save()
 
-class PreguntasRespondidas(models.Model):
+class PreguntasRespondidas_MAT021_iv1(models.Model):
 	quizUser = models.ForeignKey(QuizUsuario_MAT021_iv1, on_delete=models.CASCADE, related_name='intentos')
 	pregunta = models.ForeignKey(Pregunta_MAT021_iv1, on_delete=models.CASCADE)
 	respuesta = models.ForeignKey(ElegirRespuesta_MAT021_iv1, on_delete=models.CASCADE, null=True)
