@@ -58,7 +58,7 @@ def jugar(request):
 
 		QuizUser.validar_intento(pregunta_respondida, opcion_selecionada)
 
-		return redirect('resultado', pregunta_respondida.pk)
+		return redirect('resultados', pregunta_respondida.pk)
 
 	else:
 		pregunta = QuizUser.obtener_nuevas_preguntas()
