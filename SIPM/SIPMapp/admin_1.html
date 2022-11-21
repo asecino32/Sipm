@@ -1,0 +1,29 @@
+from django.contrib import admin
+from .models import Pregunta_MAT021_iv1,  ElegirRespuesta_MAT021_iv1, QuizUsuario_MAT021_iv1, PreguntasRespondidas_MAT021_iv1, QuizUsuario
+from .forms import ElegirInlineformset
+
+class ElegirRespuestaInline(admin.TabularInline):
+
+    can_delete = False
+    model = ElegirRespuesta_MAT021_iv1
+    max_num = ElegirRespuesta_MAT021_iv1.MAXIMO_RESPUESTA
+    min_num = ElegirRespuesta_MAT021_iv1.MAXIMO_RESPUESTA
+    formset = ElegirInlineformset
+
+class PreguntasAdmin(admin.ModelAdmin):
+    model = Pregunta_MAT021_iv1
+    inlines = (ElegirRespuestaInline,)
+    list_display= ['texto',]
+    search_fields = ['texto', 'preguntas__texto']
+
+class PreguntasRespondidasAdmin(admin.ModelAdmin):
+    list_display = ['pregunta','respuesta', 'correcta','puntaje_obtenido']
+    
+    class Meta:
+        model = PreguntasRespondidas_MAT021_iv1
+
+admin.site.register(PreguntasRespondidas_MAT021_iv1)
+admin.site.register(Pregunta_MAT021_iv1,PreguntasAdmin)
+admin.site.register(ElegirRespuesta_MAT021_iv1)
+admin.site.register(QuizUsuario)
+# Register your models here.
