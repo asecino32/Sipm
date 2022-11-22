@@ -27,11 +27,10 @@
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cerrar sesión</a>
+          <a class="nav-link" href = "{% url 'index' %}">Cerrar sesión</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"></a>
-        </li>
+          <a class="nav-link" href = "{% url 'dashboard' %}">Menu principal</a>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
         </li>
@@ -71,7 +70,7 @@
                         <h5 class="card-title">Instrucciones:</h5>
                         <h6 class="card-subtitle mb-2 text-muted">- Cada pregunta consta de 4 alternativas, donde solo una es la correcta.</h6> 
                         <h6 class="card-subtitle mb-2 text-muted">- Debes completar todas las preguntas, para así obtener tu nivel de aciertos y la retroalimentación de los ejercicios.</h6>  
-                        <h6 class="card-subtitle mb-2 text-muted">- Tienes 10 minutos para resolver, una vez transcurrido el tiempo, el formulario se cerrará.</h6>  
+                          
         </div>
     </div>
     <!--Preguntas-->
@@ -130,7 +129,7 @@
                         <li><input type="radio" name="pregunta1" id="p30"> -1</li>
                     </ol>
                     <hr />
-                    <button type="button" class="btn btn-primary" onclick="resultado()">Enviar</button>
+                    <a class="btn btn-primary" href="{% url 'retro_mat021_mv1' %}">Enviar</a>
                     <hr />                    
                 </form>
                 <p style="float: none; text-align: center;">© SIPM</p></footer>

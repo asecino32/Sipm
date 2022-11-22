@@ -70,10 +70,9 @@
                       <div class="card-body">
                         <h5 class="card-title">Instrucciones:</h5>
                         <h6 class="card-subtitle mb-2 text-muted">- Cada pregunta consta de 4 alternativas, donde solo una es la correcta.</h6> 
-                        <h6 class="card-subtitle mb-2 text-muted">- Debes completar todas las preguntas, para así obtener tu nivel de aciertos y la retroalimentación de los ejercicios.</h6>  
-                        <h6 class="card-subtitle mb-2 text-muted">- Tienes 15 minutos para resolver, una vez transcurrido el tiempo, el formulario se cerrará.</h6>  
+                        <h6 class="card-subtitle mb-2 text-muted">- Debes completar todas las preguntas, para así obtener tu nivel de aciertos y la retroalimentación de los ejercicios.</h6>
         </div>
-    </div>
+      </div>
     <!--Preguntas-->
     <div class="container">
         <div class="row">
@@ -115,7 +114,7 @@
                         <li><input type="radio" name="pregunta2" id="p18"> Opción 4</li>
                     </ol>
                     <hr />
-                    <button type="button" class="btn btn-primary" onclick="resultado()">Enviar</button>
+                    <a class="btn btn-primary" href="{% url 'retro_mat021_iv1' %}">Enviar</a>
                     <hr />                    
                 </form>
                 <p style="float: none; text-align: center;">© SIPM</p></footer>

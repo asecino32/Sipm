@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import redirect, render, get_object_or_404
 
 from .forms import NewRegister
-from .models import QuizUsuario, Pregunta, PreguntasRespondidas
+from .models import QuizUsuario, Pregunta, PreguntasRespondidas, QuizUsuario_MAT021_iv1, Pregunta_MAT021_iv1, PreguntasRespondidas_MAT021_iv1
 
 # Create your views here.
 
@@ -25,10 +25,13 @@ def dashboardView(request):
 
 def preguntasView(request):
     return render(request,'preguntas.html')
-def cuestionario_mat021_iv1(request):
-    return render(request,'cuestionarios/cuestionario_mat021_iv1.html')
+def cuestionario_mat021_mv1(request):
+    return render(request,'cuestionarios/cuestionario_mat021_mv1.html')
+def retroalimentación_mato21_mv1(request):
+    return render(request,'cuestionarios/retroalimentación_cuestionario_mat021_mv1.html')
 def retroalimentación_mato21_iv1(request):
     return render(request,'cuestionarios/retroalimentación_cuestionario_mat021_iv1.html')
+
 
 def tablero(request):
 	total_usaurios_quiz = QuizUsuario.objects.order_by('-puntaje_total')[:10]
@@ -80,3 +83,4 @@ def resultado_pregunta(request, pregunta_respondida_pk):
 		'respondida':respondida
 	}
 	return render(request, 'cuestionarios/resultados.html', context)
+

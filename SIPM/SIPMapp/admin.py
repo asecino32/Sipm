@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pregunta,  ElegirRespuesta, PreguntasRespondidas, QuizUsuario
+from .models import Pregunta,  ElegirRespuesta, PreguntasRespondidas, QuizUsuario, Pregunta_MAT021_iv1, ElegirRespuesta_MAT021_iv1, QuizUsuario_MAT021_iv1, PreguntasRespondidas_MAT021_iv1, QuizUsuario
 from .forms import ElegirInlineformset
 
 class ElegirRespuestaInline(admin.TabularInline):
@@ -26,7 +26,11 @@ admin.site.register(PreguntasRespondidas)
 admin.site.register(Pregunta,PreguntasAdmin)
 admin.site.register(ElegirRespuesta)
 admin.site.register(QuizUsuario)
+
+
 # model 2.
+
+
 class ElegirRespuestaInline_MAT021_iv1(admin.TabularInline):
 
     can_delete = False
@@ -38,11 +42,11 @@ class ElegirRespuestaInline_MAT021_iv1(admin.TabularInline):
 class PreguntasAdmin_MAT021_iv1(admin.ModelAdmin):
     model = Pregunta_MAT021_iv1
     inlines = (ElegirRespuestaInline_MAT021_iv1,)
-    list_display= ['texto',]
-    search_fields = ['texto', 'preguntas__texto']
+    list_display= ['texto1',]
+    search_fields = ['texto1', 'preguntas__texto1']
 
 class PreguntasRespondidasAdmin_MAT021_iv1(admin.ModelAdmin):
-    list_display = ['pregunta','respuesta', 'correcta','puntaje_obtenido']
+    list_display = ['pregunta1','respuesta1', 'correcta1','puntaje_obtenido1']
     
     class Meta:
         model = PreguntasRespondidas_MAT021_iv1

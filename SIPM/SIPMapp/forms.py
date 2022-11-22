@@ -29,4 +29,14 @@ class ElegirInlineformset(forms.BaseInlineFormSet):
             if formulario.cleaned_data and  formulario.cleaned_data.get('correcta') is True:
                 repuesta_correcta +=1
             
+class ElegirInlineformset_mat021_iv1(forms.BaseInlineFormSet):
+    def clean(self):
+        super(ElegirInlineformset1, self).clean()
+
+        repuesta_correct1 = 0
+        for formulario1 in self.forms:
+            if not formulario1.is_valid():
+                return
             
+            if formulario1.cleaned_data and  formulario1.cleaned_data.get('correcta1') is True:
+                repuesta_correcta1 +=1
