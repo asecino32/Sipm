@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>MAT021 - Inicial</title>
+  </head>
+  <body>
+    <h1>MAT021 - Inicial</h1>
+<!-- Navigation -->
+<nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sistema Integrado de Prácticas Matemáticas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">MAT021
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cerrar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <title> MAT021 - Inicial </title>
+</head>
+<body>
+    <!--titulo-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="text-align: center;">  </h1>
+                <h1 style="text-align: center;">  </h1>
+                <h1 style="text-align: center;">Cuestionario MAT021  </h1>
+                <h1 style="text-align: center;">Nivel Inicial  </h1>
+                <div class="container-fluid">
+                    <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Instrucciones:</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">- Cada pregunta consta de 4 alternativas, de las cuales solo una es la correcta.</h6> 
+                        <h6 class="card-subtitle mb-2 text-muted">- Debes completar todas las preguntas, para así obtener tu nivel de aciertos y la retroalimentación de los ejercicios.</h6>  
+        </div>
+    </div>
+{% block contenido %}
+
+<div class="container">
+	
+	<div class="jumbotron my-4">
+		<h4 class="text">{{respondida.pregunta.texto|safe}}</h4>
+		<h5>
+			<strong>Tu respuesta:</strong>
+			{{respondida.respuesta.texto|safe}}
+        </h5>
+
+
+	{% if respondida.respuesta.correcta %}
+		<h4 class="text-success"> Tu respuesta es correcta</h4>
+	{% else %}
+		<h4 class="text-danger">Tu respuesta es incorrecta</h4>
+
+	{% endif %}
+
+	<a href="{% url 'jugar' %}">
+		<button class="btn-primary">
+			Continuar Cuestionario
+		</button>
+	</a>
+    <a href="{% url 'dashboard' %}">
+		<button class="btn-primary">
+			Finalizar Cuestionario
+		</button>
+	</a>
+	</div>
+
+
+</div>
+
+<header class="bg-primary text-center py-3 mb-5">
+    <div class="container">
+      <h5 class="font-weight-light text-white">© SIPM</h5>
+    </div>
+  </header>
+{% endblock %}

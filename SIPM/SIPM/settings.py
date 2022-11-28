@@ -71,6 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'SIPM.wsgi.application'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 # Database

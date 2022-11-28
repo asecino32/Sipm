@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pregunta,  ElegirRespuesta, PreguntasRespondidas, QuizUsuario, Pregunta_MAT021_iv1, ElegirRespuesta_MAT021_iv1, QuizUsuario_MAT021_iv1, PreguntasRespondidas_MAT021_iv1, QuizUsuario
+from .models import Pregunta,  ElegirRespuesta, PreguntasRespondidas, QuizUsuario, Pregunta21i1, ElegirRespuesta21i1, QuizUsuario21i1, PreguntasRespondidas21i1, QuizUsuario
 from .forms import ElegirInlineformset
 
 class ElegirRespuestaInline(admin.TabularInline):
@@ -31,28 +31,28 @@ admin.site.register(QuizUsuario)
 # model 2.
 
 
-class ElegirRespuestaInline_MAT021_iv1(admin.TabularInline):
+class ElegirRespuestaInline21i1(admin.TabularInline):
 
     can_delete = False
-    model = ElegirRespuesta_MAT021_iv1
-    max_num = ElegirRespuesta_MAT021_iv1.MAXIMO_RESPUESTA
-    min_num = ElegirRespuesta_MAT021_iv1.MAXIMO_RESPUESTA
+    model = ElegirRespuesta21i1
+    max_num = ElegirRespuesta21i1.MAXIMO_RESPUESTA
+    min_num = ElegirRespuesta21i1.MAXIMO_RESPUESTA
     formset = ElegirInlineformset
 
-class PreguntasAdmin_MAT021_iv1(admin.ModelAdmin):
-    model = Pregunta_MAT021_iv1
-    inlines = (ElegirRespuestaInline_MAT021_iv1,)
-    list_display= ['texto1',]
-    search_fields = ['texto1', 'preguntas__texto1']
+class PreguntasAdmin21i1(admin.ModelAdmin):
+    model = Pregunta21i1
+    inlines = (ElegirRespuestaInline21i1,)
+    list_display= ['texto',]
+    search_fields = ['texto', 'preguntas__texto']
 
 class PreguntasRespondidasAdmin_MAT021_iv1(admin.ModelAdmin):
     list_display = ['pregunta1','respuesta1', 'correcta1','puntaje_obtenido1']
     
     class Meta:
-        model = PreguntasRespondidas_MAT021_iv1
+        model = PreguntasRespondidas21i1
 
-admin.site.register(PreguntasRespondidas_MAT021_iv1)
-admin.site.register(Pregunta_MAT021_iv1,PreguntasAdmin_MAT021_iv1)
-admin.site.register(ElegirRespuesta_MAT021_iv1)
-admin.site.register(QuizUsuario_MAT021_iv1)
+admin.site.register(PreguntasRespondidas21i1)
+admin.site.register(Pregunta21i1, PreguntasAdmin21i1)
+admin.site.register(ElegirRespuesta21i1)
+admin.site.register(QuizUsuario21i1)
 # Register your models here.
